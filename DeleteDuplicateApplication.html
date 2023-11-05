@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div id="Add_taskContainer">
+<h1>ADD YOUR TASK HERE</h1>
+<input type="text" placeholder="Type here..." id="getinput"> <br>
+<button onclick="taskhandler()">Add Task</button>
+<h3 id="output"></h3>
+</div>
+
+
+
+<style>
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+#Add_taskContainer{
+
+    background-color: darkslateblue;
+    width: 337px;
+    padding: 27px;
+    height: auto;
+    border-bottom: 7px;
+    position: absolute;
+    left: 50%;
+    top: 37%;
+    transform: translate(-50%,-37%);
+    border-radius: 4px;
+
+}
+
+
+h1{
+    color: white;
+}
+
+
+#Add_taskContainer input{
+    width: 90%;
+    border: none;
+    outline: none;
+    padding: 11px;
+    border-radius: 4px;
+    margin-top: 1.3em;
+}
+
+
+#Add_taskContainer button{
+    width: 30%;
+    padding: 11px;
+    margin-top: .7em;
+    background-color: deeppink;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+
+h3{
+    margin-top: .7em;
+    margin-left: .1;
+}
+
+
+</style>
+    
+
+<script>
+
+
+
+
+function taskhandler(){
+
+var get = document.getElementById("getinput").value;
+var element = document.createElement("p");
+var output = document.getElementById("output");
+
+if ( get !== "" ) {
+
+element.innerHTML = get;
+output.appendChild(element);
+
+}
+
+
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>
